@@ -12,7 +12,7 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000",'https://elaborate-shortbread-8d0fc5.netlify.app'],
   })
 );
 app.use(express.json());
@@ -26,7 +26,7 @@ const server = http.createServer(app);
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000",'https://elaborate-shortbread-8d0fc5.netlify.app'],
   },
 });
 
