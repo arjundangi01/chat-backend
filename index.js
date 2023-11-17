@@ -17,7 +17,9 @@ app.use(
 );
 app.use(express.json());
 const PORT = process.env.PORT;
-
+app.get('/', (req,res) => {
+  res.send('welcome')
+})
 app.use("/users", userRouter);
 app.use("/messages", messageRouter);
 app.use("/conversations", conversationRouter);
